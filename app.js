@@ -254,38 +254,116 @@ function renderLangButton() {
 // 渲染首页
 function renderHome() {
     app.innerHTML = `
-        <div class="header" style="background: transparent; position: absolute; width: 100%; display: flex; justify-content: flex-end; box-shadow: none;">
+        <div class="header" style="background: transparent; position: absolute; width: 100%; display: flex; justify-content: flex-end; box-shadow: none; backdrop-filter: none;">
              ${renderLangButton()}
         </div>
 
         <div class="home-container fade-in">
             <div class="welcome-text">
                 <h2>${t(UI_TEXT.appTitle)}</h2>
-                <p>${t(UI_TEXT.welcome)}</p>
+                <p>✨ ${t(UI_TEXT.welcome)} ✨</p>
             </div>
             
-            <div class="category-card behavior-entry-card" onclick="selectPet()">
-                <div class="category-icon" style="font-size: 3rem; margin-bottom: 10px;">📚</div>
-                <div class="category-title" style="font-size: 1.2rem;">${t(UI_TEXT.behaviorLibTitle)}</div>
-                <p>${t(UI_TEXT.behaviorLibDesc)}</p>
-            </div>
+            <div class="home-grid">
+                <div class="category-card behavior-entry-card" onclick="selectPet()">
+                    <div class="deco-cat">
+                        <div class="cat-tail"></div>
+                        <div class="cat-body">
+                            <div class="cat-collar"><div class="cat-bell"></div></div>
+                            <div class="cat-coin"><span>千万两</span></div>
+                        </div>
+                        <div class="cat-head">
+                            <div class="cat-ear left"></div>
+                            <div class="cat-ear right"></div>
+                            <div class="cat-face">
+                                <div class="cat-eye left"></div>
+                                <div class="cat-eye right"></div>
+                                <div class="cat-nose"></div>
+                                <div class="cat-mouth"></div>
+                                <div class="cat-whiskers"></div>
+                            </div>
+                        </div>
+                        <div class="cat-paw left"></div>
+                    </div>
+                    <div class="category-icon">📚</div>
+                    <div class="category-title">${t(UI_TEXT.behaviorLibTitle)}</div>
+                    <p>${t(UI_TEXT.behaviorLibDesc)}</p>
+                </div>
 
-            <div class="category-card profile-entry-card" onclick="navigateTo('profiles')">
-                <div class="category-icon" style="font-size: 3rem; margin-bottom: 10px;">📋</div>
-                <div class="category-title" style="font-size: 1.2rem;">${t(UI_TEXT.myPets)}</div>
-                <p>${t(UI_TEXT.profileDesc)}</p>
-            </div>
+                <div class="category-card translator-entry-card" onclick="navigateTo('translator', { reset: true })">
+                    <div class="deco-cat">
+                        <div class="cat-tail"></div>
+                        <div class="cat-body">
+                            <div class="cat-collar"><div class="cat-bell"></div></div>
+                            <div class="cat-coin"><span>开运</span></div>
+                        </div>
+                        <div class="cat-head">
+                            <div class="cat-ear left"></div>
+                            <div class="cat-ear right"></div>
+                            <div class="cat-face">
+                                <div class="cat-eye left"></div>
+                                <div class="cat-eye right"></div>
+                                <div class="cat-nose"></div>
+                                <div class="cat-mouth"></div>
+                                <div class="cat-whiskers"></div>
+                            </div>
+                        </div>
+                        <div class="cat-paw left"></div>
+                    </div>
+                    <div class="category-icon">✨</div>
+                    <div class="category-title">${t(UI_TEXT.translatorTitle)}</div>
+                    <p>${t(UI_TEXT.translatorDesc)}</p>
+                </div>
 
-            <div class="category-card guide-entry-card" onclick="navigateTo('guide-list')">
-                <div class="category-icon" style="font-size: 3rem; margin-bottom: 10px;">📖</div>
-                <div class="category-title" style="font-size: 1.2rem;">${t(UI_TEXT.guideTitle)}</div>
-                <p>${t(UI_TEXT.guideDesc)}</p>
-            </div>
+                <div class="category-card guide-entry-card" onclick="navigateTo('guide-list')">
+                    <div class="deco-cat">
+                        <div class="cat-tail"></div>
+                        <div class="cat-body">
+                            <div class="cat-collar"><div class="cat-bell"></div></div>
+                            <div class="cat-coin"><span>大吉</span></div>
+                        </div>
+                        <div class="cat-head">
+                            <div class="cat-ear left"></div>
+                            <div class="cat-ear right"></div>
+                            <div class="cat-face">
+                                <div class="cat-eye left"></div>
+                                <div class="cat-eye right"></div>
+                                <div class="cat-nose"></div>
+                                <div class="cat-mouth"></div>
+                                <div class="cat-whiskers"></div>
+                            </div>
+                        </div>
+                        <div class="cat-paw left"></div>
+                    </div>
+                    <div class="category-icon">📖</div>
+                    <div class="category-title">${t(UI_TEXT.guideTitle)}</div>
+                    <p>${t(UI_TEXT.guideDesc)}</p>
+                </div>
 
-            <div class="category-card translator-entry-card" onclick="navigateTo('translator', { reset: true })">
-                <div class="category-icon" style="font-size: 3rem; margin-bottom: 10px;">✨</div>
-                <div class="category-title" style="font-size: 1.2rem;">${t(UI_TEXT.translatorTitle)}</div>
-                <p>${t(UI_TEXT.translatorDesc)}</p>
+                <div class="category-card profile-entry-card" onclick="navigateTo('profiles')">
+                    <div class="deco-cat">
+                        <div class="cat-tail"></div>
+                        <div class="cat-body">
+                            <div class="cat-collar"><div class="cat-bell"></div></div>
+                            <div class="cat-coin"><span>平安</span></div>
+                        </div>
+                        <div class="cat-head">
+                            <div class="cat-ear left"></div>
+                            <div class="cat-ear right"></div>
+                            <div class="cat-face">
+                                <div class="cat-eye left"></div>
+                                <div class="cat-eye right"></div>
+                                <div class="cat-nose"></div>
+                                <div class="cat-mouth"></div>
+                                <div class="cat-whiskers"></div>
+                            </div>
+                        </div>
+                        <div class="cat-paw left"></div>
+                    </div>
+                    <div class="category-icon">📋</div>
+                    <div class="category-title">${t(UI_TEXT.myPets)}</div>
+                    <p>${t(UI_TEXT.profileDesc)}</p>
+                </div>
             </div>
         </div>
     `;

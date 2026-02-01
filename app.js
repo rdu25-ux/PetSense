@@ -10,7 +10,7 @@ const state = {
         bodyPart: null,
         actionId: null
     },
-    language: 'zh',
+    language: 'en',
     profiles: []
 };
 
@@ -179,7 +179,7 @@ function renderProfiles() {
                             <div class="profile-icon">${p.type === 'cat' ? '🐱' : '🐶'}</div>
                             <div class="profile-info">
                                 <h3>${p.name}</h3>
-                                <p>${p.breed || (p.type === 'cat' ? t(UI_TEXT.cat) : t(UI_TEXT.dog))} ${p.age ? `• ${p.age}岁` : ''}</p>
+                                <p>${p.breed || (p.type === 'cat' ? t(UI_TEXT.cat) : t(UI_TEXT.dog))} ${p.age ? `• ${p.age} ${t(UI_TEXT.ageUnit)}` : ''}</p>
                             </div>
                             <button class="delete-btn" onclick="deleteProfile('${p.id}', event)">✕</button>
                         </div>

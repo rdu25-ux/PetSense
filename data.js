@@ -36,6 +36,7 @@ const UI_TEXT = {
     petType: { zh: "宠物类型", en: "Pet Type" },
     petBreed: { zh: "品种 (选填)", en: "Breed (Optional)" },
     petAge: { zh: "年龄 (选填)", en: "Age (Optional)" },
+    ageUnit: { zh: "岁", en: "y/o" },
     save: { zh: "保存档案", en: "Save Profile" },
     delete: { zh: "删除", en: "Delete" },
     selectType: { zh: "选择类型", en: "Select Type" },
